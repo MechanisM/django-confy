@@ -1,3 +1,39 @@
+public/uploads/
+public/assets/
+
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+.idea
+atlassian-ide-plugin.xml
+# Icon must ends with two \r.
+#Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+*.sublime-workspace
+*.sublime-project
+
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ss]cripts
+
+
+
+local_settings.py
+.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,7 +44,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
-bin/
+#bin/
 build/
 develop-eggs/
 dist/
@@ -27,7 +63,6 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
 .tox/
 .coverage
 .cache
@@ -52,3 +87,7 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+.env
+*.db
+*.sqlite
+*.sqlite3
