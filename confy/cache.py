@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import urlparse
+from urllib.parse import urlparse
 from confy import env
 
 
