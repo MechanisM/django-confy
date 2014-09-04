@@ -3,9 +3,13 @@ import os
 import sys
 import warnings
 import ast
-from urllib.parse import urlparse
 from django.core.exceptions import ImproperlyConfigured
 from django.conf import settings
+
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse as urlparse
 
 
 

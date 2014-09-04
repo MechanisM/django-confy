@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from urllib.parse import urlparse
-from confy import env
+from confy import env, urlparse
 
 
 DATABASE_SCHEMES = {
