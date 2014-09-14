@@ -2,13 +2,16 @@
 from confy import env, urlparse
 
 
-DATABASE_SCHEMES = {
+SCHEMES = {
     'postgres': 'django.db.backends.postgresql_psycopg2',
     'postgresql': 'django.db.backends.postgresql_psycopg2',
+    'pgsql': 'django.db.backends.postgresql_psycopg2',
     'postgis': 'django.contrib.gis.db.backends.postgis',
     'mysql': 'django.db.backends.mysql',
     'mysql2': 'django.db.backends.mysql',
-    'sqlite': 'django.db.backends.sqlite3'
+    'mysqlgis': 'django.contrib.gis.db.backends.mysql',
+    'spatialite': 'django.contrib.gis.db.backends.spatialite',
+    'sqlite': 'django.db.backends.sqlite3',
 }
 
 # Register database schemes in URLs.
@@ -45,11 +48,11 @@ def parse_database_url(url):
 
     # Update with environment configuration.
     config.update({
-        'NAME': path,
-        'USER': url.username,
-        'PASSWORD': url.password,
-        'HOST': url.hostname,
-        'PORT': url.port,
+        'NAME': path or '',
+        'USER': url.username or '',
+        'PASSWORD': url.password or '',
+        'HOST': url.hostname or '',
+        'PORT': url.port or '',
     })
 
     if url.scheme in DATABASE_SCHEMES:
