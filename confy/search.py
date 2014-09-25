@@ -7,6 +7,7 @@ SEARCH_SCHEMES = {
     'solr': 'haystack.backends.solr_backend.SolrEngine',
     'whoosh': 'haystack.backends.whoosh_backend.WhooshEngine',
     'simple': 'haystack.backends.simple_backend.SimpleEngine',
+    'xapian': 'xapian_backend.XapianEngine'
 }
 
 # Register database schemes in URLs.
@@ -16,7 +17,7 @@ for s in SEARCH_SCHEMES.items():
 
 USES_URL = ["solr"]
 USES_INDEX = ["elasticsearch"]
-USES_PATH = ["whoosh"]
+USES_PATH = ["whoosh", "xapian"]
 
 
 def parse_search_url(url):
@@ -58,5 +59,17 @@ def parse_search_url(url):
         config.update({
             "PATH": path,
         })
+
+    return config
+
+
+def config(name='SEARCH_URL', default='simple://'):
+    """Returns configured SEARCH dictionary from SEARCH_URL"""
+    config = {}
+
+    s = env(name, default)
+
+    if s:
+        config = parse_search_url(s)
 
     return config
