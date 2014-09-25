@@ -2,7 +2,7 @@
 from confy import env, urlparse
 
 
-SCHEMES = {
+DATABASE_SCHEMES = {
     'postgres': 'django.db.backends.postgresql_psycopg2',
     'postgresql': 'django.db.backends.postgresql_psycopg2',
     'pgsql': 'django.db.backends.postgresql_psycopg2',
@@ -11,7 +11,7 @@ SCHEMES = {
     'mysql2': 'django.db.backends.mysql',
     'mysqlgis': 'django.contrib.gis.db.backends.mysql',
     'spatialite': 'django.contrib.gis.db.backends.spatialite',
-    'sqlite': 'django.db.backends.sqlite3',
+    'sqlite': 'django.db.backends.sqlite3'
 }
 
 # Register database schemes in URLs.
