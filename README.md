@@ -22,7 +22,6 @@ Actually this code is just [django-dotenv](https://github.com/jacobian-archive/d
 
     ...
     DJANGO_SETTINGS_MODULE=project_name.settings
-    DJANGO_CONFIGURATION='Development'
     DEV=True
     DATABASE_URL=sqlite:////server/apps/project_name/project_name.sqlite3
     CACHE_URL=uwsgi://
