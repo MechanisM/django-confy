@@ -1,28 +1,13 @@
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 import os
 import sys
 import warnings
 import ast
-from django.core.exceptions import ImproperlyConfigured
-from django.conf import settings
 
 try:
     import urlparse
 except ImportError:
     import urllib.parse as urlparse
-
-
-
-def setting(key, default=None, required=False):
-    try:
-        value = getattr(settings, key, default)
-        return ast.literal_eval(value)
-    except (SyntaxError, ValueError):
-        return value
-    except KeyError:
-        if default or not required:
-            return default
-        raise ImproperlyConfigured("Missing required setting variable '%s'" % key)
 
 
 
@@ -67,7 +52,7 @@ def env(key, default=None, required=False):
     except KeyError:
         if default or not required:
             return default
-        raise ImproperlyConfigured("Missing required environment variable '%s'" % key)
+        raise Exception("Missing required environment variable '%s'" % key)
 
 
 default_app_config = 'confy.apps.ConfyConfig'
