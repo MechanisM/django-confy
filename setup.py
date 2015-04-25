@@ -1,9 +1,12 @@
 import os
-from setuptools import setup, find_packages
+
+try:
+    from setuptools import setup, find_packages
+except ImportError:
+    from distutils.core import setup
+
 from confy import __version__
 
-
-README = open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
 
 
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
@@ -13,7 +16,7 @@ setup(
     name="django-confy",
     version=__version__,
     description="Django project configuration helpers",
-    long_description=README,
+    long_description=open('README.rst').read(),
     url='http://github.com/MechanisM/django-confy',
     author='Eugene MechanisM',
     author_email='eugene@mechanism.name',
