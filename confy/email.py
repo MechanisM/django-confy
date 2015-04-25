@@ -9,7 +9,7 @@ EMAIL_SCHEMES = {
     'file': 'django.core.mail.backends.filebased.EmailBackend',
     'memory': 'django.core.mail.backends.locmem.EmailBackend',
     'dummy': 'django.core.mail.backends.dummy.EmailBackend',
-    'uwsgi': 'uwsgi_mail.uwsgi.EmailBackend'
+    'uwsgi': 'django_uwsgi.mail.EmailBackend'
 }
 
 # Register email schemes in URLs.
