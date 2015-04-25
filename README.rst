@@ -1,9 +1,9 @@
 Django-Confy
-============
+~~~~~~~~~~~~
 
 Comfy config for Django
 
-Actually this code is just `django-dotenv <https://github.com/jacobian-archive/django-dotenv>`_, `django-getenv <https://github.com/schwuk/django-getenv>`_, `dj-database-url <https://github.com/kennethreitz/dj-database-url>`_, `dj-email-url <https://github.com/migonzalvar/dj-email-url>`_, `dj-search-url <https://github.com/dstufft/dj-search-url>`_ and `django-cache-url <https://github.com/ghickman/django-cache-url>`_ combined together.
+Actually this code is just a few apps combined together.
 
 
 Installation
@@ -55,12 +55,17 @@ Example manage.py
  
 
 Example for wsgi.py
----------------
+-------------------
 
 .. code-block:: py
 
     from django.core.wsgi import get_wsgi_application
     application = get_wsgi_application()
+
+License
+~~~~~~~
+
+`MIT <https://github.com/MechanisM/django-confy/raw/master/LICENSE>`_
 
 
 Credits
@@ -68,3 +73,9 @@ Credits
 
 * Code borrowed by `Eugene MechanisM <https://git.io/MechanisM>`_
 * Released under `MIT License <http://www.opensource.org/licenses/mit-license.php>`_
+* `django-dotenv <https://github.com/jacobian-archive/django-dotenv>`_
+* `django-getenv <https://github.com/schwuk/django-getenv>`_
+* `dj-database-url <https://github.com/kennethreitz/dj-database-url>`_
+* `dj-email-url <https://github.com/migonzalvar/dj-email-url>`_
+* `dj-search-url <https://github.com/dstufft/dj-search-url>`_ 
+* `django-cache-url <https://github.com/ghickman/django-cache-url>`_
