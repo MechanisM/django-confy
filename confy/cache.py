@@ -12,7 +12,7 @@ CACHE_SCHEMES = {
     'pymemcached': 'django.core.cache.backends.memcached.MemcachedCache',
     'redis': 'redis_cache.cache.RedisCache',
     'hiredis': 'redis_cache.cache.RedisCache',
-    'uwsgi': 'uwsgicache.UWSGICache'
+    'uwsgi': 'django_uwsgi.cache.UwsgiCache'
 }
 
 
@@ -28,7 +28,7 @@ def parse_cache_url(url):
     url = urlparse.urlparse(url)
     # Update with environment configuration.
     config['BACKEND'] = CACHE_SCHEMES[url.scheme]
-    if url.scheme == 'file':
+    if url.scheme in ('file', 'uwsgi'):
         config['LOCATION'] = url.path
         return config
     elif url.scheme in ('redis', 'hiredis'):
