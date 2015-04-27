@@ -67,6 +67,10 @@ License
 
 `MIT <https://github.com/MechanisM/django-confy/raw/master/LICENSE>`_
 
+Documentation
+~~~~~~~~~~~~~
+
+`Documentation <http://django-confy.rtfd.org>`_
 
 Credits
 -------
