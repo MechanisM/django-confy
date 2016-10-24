@@ -10,8 +10,8 @@ CACHE_SCHEMES = {
     'memcached': 'django.core.cache.backends.memcached.PyLibMCCache',
     'djangopylibmc': 'django_pylibmc.memcached.PyLibMCCache',
     'pymemcached': 'django.core.cache.backends.memcached.MemcachedCache',
-    'redis': 'redis_cache.cache.RedisCache',
-    'hiredis': 'redis_cache.cache.RedisCache',
+    'redis': 'django_redis.cache.RedisCache',
+    'hiredis': 'django_redis.cache.RedisCache',
     'uwsgi': 'django_uwsgi.cache.UwsgiCache'
 }
 
