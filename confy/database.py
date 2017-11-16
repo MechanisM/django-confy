@@ -4,7 +4,7 @@ from confy import env, urlparse
 
 DATABASE_SCHEMES = {
     'postgres': 'django.db.backends.postgresql_psycopg2',
-    'postgresql': 'django.db.backends.postgresql_psycopg2',
+    'postgresql': 'django.db.backends.postgresql',
     'pgsql': 'django.db.backends.postgresql_psycopg2',
     'postgis': 'django.contrib.gis.db.backends.postgis',
     'mysql': 'django.db.backends.mysql',
